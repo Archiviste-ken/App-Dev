@@ -1,8 +1,11 @@
 import React from 'react'
 
-const H1 = () => {
+const H1 = ({title, desc}, ) => {   // here props is object
   return (
-    <div>H1</div>
+    <div>
+        <h1>{title}</h1>
+        <p>{desc}</p>
+    </div>
   )
 }
 
