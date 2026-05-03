@@ -69,11 +69,23 @@
 
 // export default App;
 
+// import React from "react";
+// import GitHubProfile from "./GitHubProfile";
+
+// const App = () => {
+//   return <GitHubProfile />;
+// };
+
+// export default App;
+
 import React from "react";
-import GitHubProfile from "./GitHubProfile";
 
 const App = () => {
-  return <GitHubProfile />;
+  const onClick = (event) => {
+    console.log(event);
+  };
+
+  return <button onClick={onClick}>App</button>;
 };
 
 export default App;
