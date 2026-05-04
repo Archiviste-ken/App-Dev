@@ -13,6 +13,8 @@ const GitHubProfile = () => {
           "https://api.github.com/users/Archiviste-Ken",
         );
         const data = await response.json();
+        console.log(data);
+        
         setData(data);
       } catch (error) {
         console.log(error);
