@@ -49,7 +49,10 @@
 //           margin: 10,
 //           borderRadius: 5,
 //         })}
-//       >
+//             hitSlop={
+//               {  top: 10, bottom: 10, left: 20, right: 20}
+//             }
+// //       >
 //         {({ pressed }) =>
 //           pressed ? <Text>Presssing...</Text> : <Text>Press Me</Text>
 //         }
