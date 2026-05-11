@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Image, View, Text, TextInput } from "react-native";
+import { Image, View, Text, TextInput, Pressable } from "react-native";
 
 export default function HomeScreen() {
   const [name, setName] = useState("");
@@ -32,7 +32,28 @@ export default function HomeScreen() {
         placeholder="Enter your name"
         value={name}
         onChangeText={setName}
+        placeholderTextColor={"blue"}
+        style={{
+          borderWidth: 1,
+          borderColor: "gray",
+          padding: 10,
+          margin: 10,
+        }}
       />
+
+      <Pressable
+        onPress={() => alert("Button pressed!")}
+        style={({ pressed }) => ({
+          backgroundColor: pressed ? "lightblue" : "blue",
+          padding: 10,
+          margin: 10,
+          borderRadius: 5,
+        })}
+      >
+        {({ pressed }) =>
+          pressed ? <Text>Presssing...</Text> : <Text>Press Me</Text>
+        }
+      </Pressable>
     </View>
   );
 }
